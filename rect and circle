@@ -1,0 +1,17 @@
+x=0
+y=0
+def setup():
+    size(500,500)
+    frameRate(35)
+def draw():
+    global x
+    global y
+    background(0)
+    translate(250,250)
+    circle(0,0,60)
+    x=x+1
+    rotate(radians(x))
+    translate(100,0)
+    y=y-2
+    rotate(radians(y))
+    rect(0,0,20,20)
