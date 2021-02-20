@@ -1,0 +1,13 @@
+x=0
+def setup():
+    size(500,500)
+    frameRate(35)
+def draw():
+    global x
+    background(0)
+    x=x+1
+    circle(x,x,50)
+    if x>505:
+        x=0
+    elif x<505:
+        x=x+1
