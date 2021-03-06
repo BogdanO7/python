@@ -1,0 +1,24 @@
+def setup():
+    size(500,500)
+    frameRate(30)
+    
+def draw():
+    colorsq=1
+    for y in range(8):
+        if colorsq==1:
+            fill(0)
+            colorsq=0
+        elif colorsq==0:
+                fill(255)
+                colorsq=1
+        for x in range(8):
+            if colorsq==1:
+                fill(0)
+                colorsq=0
+            elif colorsq==0:
+                fill(255)
+                colorsq=1
+            square(x*60,y*60,60)
+            
+            
+    
