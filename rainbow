@@ -1,0 +1,13 @@
+y=[0,0,0,0,0,0,0,0,0]
+dy=[0,0,0,0,0,0,0,0,0]
+def setup():
+    global y 
+    size(30*len(y),400)
+    for index in range(len(dy)): 
+        dy[index]=random(2,6)
+    background(0,0,100)
+    def draw():
+        global y
+        background(0,0,100)
+        for x in range(len(y)):
+            y[x]+= dy[x]
