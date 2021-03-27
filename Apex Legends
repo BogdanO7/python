@@ -1,0 +1,23 @@
+pers=[]
+name=["Bloodhound","Bangalore","Lifeline","Gibraltar"]
+num=0
+def setup():
+    global num
+    size (652,730)
+    pers.append(loadImage("bl.png"))
+    pers.append(loadImage("Bn.png"))
+    pers.append(loadImage("ll.png"))
+    pers.append(loadImage("gb.png"))
+    textSize(30)
+def mouseClicked():
+    global num
+    if mouseButton==RIGHT and num<3:
+        num=num+1
+    if mouseButton==LEFT and num>0:
+        num=num-1
+def draw():
+    background(255)
+    image(pers[num],0,0)
+    fill(12)
+    text(name[num],230,65)
+    
