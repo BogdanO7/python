@@ -1,0 +1,29 @@
+a=1
+b=100
+c=100
+s=0
+def snezhinka(x,y):
+    global c,b,d
+    
+    stroke(255)
+    line(0,0,100,0)
+    line(70,0,90,20)
+    line(70,0,90,-20)
+    line(30,0,50,20)
+    line(30,0,50,-20)
+def snow(c,b,a):
+    translate(c,b)
+    scale(a)
+    for i in range(8):
+         snezhinka(c,b)
+         rotate(radians(45))
+def setup():
+    size(500,500)
+    frameRate(35)
+def draw():
+    global c,b,s
+    s=s+2
+    background(0)
+    translate(c,b)
+    rotate(radians(45+s))
+    snow(0,0,1)
