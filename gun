@@ -1,0 +1,34 @@
+class GUN:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def draw_(self):
+        rect(self.x,self.y,30,70)
+        
+class BULLETS:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def draw_(self):
+        circle(self.x,self.y,10)
+def setup():
+    size(500,500)
+    global gun,bl
+    gun=GUN(230,420)
+    bl=BULLETS(gun.x+10,460)
+def keyPressed():
+    if keyCode==RIGHT:
+        gun.x+=2
+    if keyCode==LEFT:
+        gun.x-=2
+    if key== ' ':
+        bl.x = gun.x
+        bl.y = 500
+        
+def draw():
+    background(0)
+    
+    bl.draw_()
+    bl.y -= 2
+    fill(127)
+    gun.draw_()
