@@ -37,3 +37,4 @@ def draw():
     text(int(Usa),120,170)
     text(int(Rus+Ger+Fra+Usa),65,210)
     text("Day ",10,245)
+    text(day_,75,245)
