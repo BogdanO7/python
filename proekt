@@ -1,0 +1,35 @@
+fc=0
+sc=0
+x=0
+zn=0
+y=0
+state = 0
+    
+
+def setup():
+    size(800,500)
+    background("#38B2CE")
+    textSize(70)
+def keyPressed():
+    
+def draw():
+    global x,fc,sc,zn,y,state
+    fill(0)
+    if state == 0:
+        fc=floor(random(1,10))
+        sc=floor(random(1,10))
+        zn=floor(random(1,4))
+        if zn==1:
+            x=fc+sc
+        elif zn==2:
+            x=fc-sc
+        state = 1
+    if state == 1:
+        if zn==1:
+            text(str(fc)+ ' + ' + str(sc) , 250,250)
+        elif zn==2:
+            text(str(fc)+ ' - ' + str(sc) , 250,250)
+    if state == 3:
+        if x==y:
+            background("#38B2CE")
+            text("WIN",250,250)
