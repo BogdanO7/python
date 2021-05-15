@@ -1,7 +1,7 @@
 class Circle:
-    def __init__(self , color_):
-        self.x = 200
-        self.y = 100
+    def __init__(self ,color_,x,y):
+        self.x = x
+        self.y = y
         self.color_ = color_
     def draw_(self):
         fill(255,0,0)
@@ -19,6 +19,9 @@ res=0
 win=0
 raund=[]
 
+y_next = 0
+x_next = 0
+
 def setup():
     size(800,500)
     background("#38B2CE")
@@ -31,9 +34,7 @@ def draw():
     background("#38B2CE")
     fill(255)
     rect(215,290,300,70)
-    
-    for circ in raund:
-        circ.draw_()
+
     
     fill(0)
 
@@ -70,24 +71,31 @@ def draw():
         textSize(70)
         if y==2007:
             textSize(40)
-            text('Lebedev and Obletsov loxi',100,370)
+            text(';)',100,370)
+            
+    for circ in raund:
+        circ.draw_()
 
 def keyPressed():
-    global y,x,res,state,win
+    global y,x,res,state,win,x_next,y_next
     #if key >= '0' and key <= '9':
     #print(int(key))
     if key >= '0' and key <= '9' and y<=99999:
         y=10*y+int(key)
         
     if key==ENTER and y==x:    
-        raund.append(Circle(True))
+        raund.append(Circle(True,x_next*40,y_next*40))
+        
+        x_next+= 1
+        
         state = 0
         res=res+1
         win=win+1
         y=0
         
     elif key==ENTER and y!=x:
-        raund.append(Circle(False))
+        raund.append(Circle(False , x_next*40,y_next*40))
+        y_next+=1
         state = 0
         res=res+1
         y=0
