@@ -32,7 +32,7 @@ def setup():
     frameRate(60)
     
 def draw():
-    global x,fc,sc,zn,y,state,time, level, res
+    global x,fc,sc,zn,y,state,time, level, res,x_next
     #time=time+1/60
     background("#38B2CE")
     fill(255)
@@ -62,6 +62,7 @@ def draw():
             level=3
         while len(raund)!=0:
             del raund[0]
+        
     
     if state == 0:
         if level==1:
@@ -96,6 +97,8 @@ def draw():
         textSize(70)
     
     if res>=15:
+        x_next = 2
+        y_next = 1
         state = 2
     if state == 2:
         background("#38B2CE")
@@ -123,10 +126,8 @@ def keyPressed():
     if state==3 and key==ENTER:
         state=0
     elif key==ENTER and y==x and res<15:    
-        raund.append(Circle(True,x_next*40,y_next*40))
-        
-        x_next+= 1
-        
+        raund.append(Circle(True,x_next*40,y_next*40))    
+        x_next+= 1    
         state = 0
         res=res+1
         win=win+1
@@ -141,6 +142,3 @@ def keyPressed():
         
     elif key==BACKSPACE:
         y=y/10
-        
-
-#circle(100,190,30)
