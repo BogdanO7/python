@@ -1,0 +1,6 @@
+a=int(input('Введите число  '))
+c=0
+for i in range(a):
+    x=int(input('число  '))
+    c=c+x
+print(c)
