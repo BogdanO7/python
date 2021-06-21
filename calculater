@@ -1,0 +1,29 @@
+z=str(input('Введите знак   '))
+fc=int(input('Введите первое число   '))
+sc=int(input('Введите второе число   '))
+while(z!='выход'):
+    if z=='+':
+        print(fc+sc)
+        z=str(input('Введите знак   '))
+        if z!='выход':
+            fc=int(input('Введите первое число   '))
+            sc=int(input('Введите второе число   '))
+    elif z=='-':
+        print(fc-sc)
+        z=str(input('Введите знак   '))
+        if z!='выход':
+            fc=int(input('Введите первое число   '))
+            sc=int(input('Введите второе число   '))
+    elif z=='*':
+        print(fc*sc)
+        z=str(input('Введите знак   '))
+        if z!='выход':
+            fc=int(input('Введите первое число   '))
+            sc=int(input('Введите второе число   '))
+    elif z=='/':
+        print(fc/sc)
+        z=str(input('Введите знак   '))
+        if z!='выход':
+            fc=int(input('Введите первое число   '))
+            sc=int(input('Введите второе число   '))
+
