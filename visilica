@@ -1,0 +1,90 @@
+import random
+
+words=['о г о н ь','б и л е т']
+secret=['-','-','-','-','-']
+word=words[random.randint(0,1)].split(' ')
+mistakes=0
+bukva=input('Введите букву   ')
+print(word)
+
+while(bukva!="exit"):
+    if bukva==word[0]:
+        print(1)
+        bukva=input('Введите букву   ')
+    if bukva==word[1]:
+        print(2)
+        bukva=input('Введите букву   ')
+    if bukva==word[2]:
+        print(3)
+        bukva=input('Введите букву   ')
+    if bukva==word[3]:
+        print(4)
+        bukva=input('Введите букву   ')
+    if bukva==word[4]:
+        print(5)
+        bukva=input('Введите букву   ')
+    if bukva!=word[0] and bukva!=word[1] and bukva!=word[2] and bukva!=word[3] and bukva!=word[4]:
+        print(0)
+        mistakes+=1
+    if mistakes==0:
+        print('    +---+')
+        print('    |   |')
+        print('        |')
+        print('        |')
+        print('        |')
+        print('        |')
+        print(' =========')
+    elif mistakes==1:
+        print('    +---+')
+        print('    |   |')
+        print('    O   |')
+        print('        |')
+        print('        |')
+        print('        |')
+        print(' =========')
+        bukva=input('Неверно.Введите букву   ')
+    elif mistakes==2:
+        print('    +---+')
+        print('    |   |')
+        print('    O   |')
+        print('    |   |')
+        print('        |')
+        print('        |')
+        print(' =========')
+        bukva=input('Неверно.Введите букву   ')
+    elif mistakes==3:
+        print('    +---+')
+        print('    |   |')
+        print('    O   |')
+        print('   /|   |')
+        print('        |')
+        print('        |')
+        print(' =========')
+        bukva=input('Неверно.Введите букву   ')
+    elif mistakes==4:
+        print('    +---+')
+        print('    |   |')
+        print('    O   |')
+        print('   /|\  |')
+        print('        |')
+        print('        |')
+        print(' =========')
+        bukva=input('Неверно.Введите букву   ')
+    elif mistakes==5:
+        print('    +---+')
+        print('    |   |')
+        print('    O   |')
+        print('   /|\  |')
+        print('   /    |')
+        print('        |')
+        print(' =========')
+        bukva=input('Неверно.Введите букву   ')
+    elif mistakes==6:
+        print('    +---+')
+        print('    |   |')
+        print('    O   |')
+        print('   /|\  |')
+        print('   / \  |')
+        print('        |')
+        print(' =========')
+        bukva=input('Неверно.Введите букву   ')
