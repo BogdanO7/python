@@ -1,30 +1,30 @@
 import random
 
-words=['о г о н ь','б и л е т']
+words=['а т л е т','б и л е т','о г о н ь','в а г о н','г р о з а','г е л и й','д р о б ь','л и ц е й','п а н д а','р а й о н','с у м м а','','','','','','','','','']
 secret=['-','-','-','-','-']
 word=words[random.randint(0,1)].split(' ')
-mistakes=0
-bukva=input('Введите букву   ')
+mistakes=-1
 print(word)
+bukva=input('Для начала игры введите единицу    ')
+z=0
 
-while(bukva!="exit"):
+while(mistakes!=6):
     if bukva==word[0]:
-        print(1)
-        bukva=input('Введите букву   ')
+        secret.pop(0)
+        secret.insert(0,word[0])
     if bukva==word[1]:
-        print(2)
-        bukva=input('Введите букву   ')
+        secret.pop(1)
+        secret.insert(1,word[1])
     if bukva==word[2]:
-        print(3)
-        bukva=input('Введите букву   ')
+        secret.pop(2)
+        secret.insert(2,word[2])
     if bukva==word[3]:
-        print(4)
-        bukva=input('Введите букву   ')
+        secret.pop(3)
+        secret.insert(3,word[3])
     if bukva==word[4]:
-        print(5)
-        bukva=input('Введите букву   ')
+        secret.pop(4)
+        secret.insert(4,word[4])
     if bukva!=word[0] and bukva!=word[1] and bukva!=word[2] and bukva!=word[3] and bukva!=word[4]:
-        print(0)
         mistakes+=1
     if mistakes==0:
         print('    +---+')
@@ -42,7 +42,6 @@ while(bukva!="exit"):
         print('        |')
         print('        |')
         print(' =========')
-        bukva=input('Неверно.Введите букву   ')
     elif mistakes==2:
         print('    +---+')
         print('    |   |')
@@ -51,7 +50,6 @@ while(bukva!="exit"):
         print('        |')
         print('        |')
         print(' =========')
-        bukva=input('Неверно.Введите букву   ')
     elif mistakes==3:
         print('    +---+')
         print('    |   |')
@@ -60,7 +58,6 @@ while(bukva!="exit"):
         print('        |')
         print('        |')
         print(' =========')
-        bukva=input('Неверно.Введите букву   ')
     elif mistakes==4:
         print('    +---+')
         print('    |   |')
@@ -69,7 +66,6 @@ while(bukva!="exit"):
         print('        |')
         print('        |')
         print(' =========')
-        bukva=input('Неверно.Введите букву   ')
     elif mistakes==5:
         print('    +---+')
         print('    |   |')
@@ -78,7 +74,6 @@ while(bukva!="exit"):
         print('   /    |')
         print('        |')
         print(' =========')
-        bukva=input('Неверно.Введите букву   ')
     elif mistakes==6:
         print('    +---+')
         print('    |   |')
@@ -87,4 +82,6 @@ while(bukva!="exit"):
         print('   / \  |')
         print('        |')
         print(' =========')
-        bukva=input('Неверно.Введите букву   ')
+    print(secret[0] + secret[1] + secret[2] + secret[3] + secret[4])
+    bukva=input('Введите букву   ')
+print(10)
