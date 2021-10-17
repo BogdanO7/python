@@ -1,0 +1,27 @@
+import keyboard
+import time
+import random
+a=0
+b=0 #для b 1-победа 2-проигрыш
+x=0
+y=0
+z=0
+while(a!=1):
+    a=int(input('"Однорукий ковбой". Для начала игры введите 1.    '))
+while(b!=1 and b!=2):
+    x=str(random.randint(1,3))
+    z=str(random.randint(1,3))
+    y=str(random.randint(1,3))
+    print(x+' '+y+' '+z+' ')
+    time.sleep(1)
+    if keyboard.is_pressed('space'):
+        if x==y and x==z and y==z:
+            b=1
+        else:
+            b=2
+
+if b==1:
+    print('Вы выиграли!')
+elif b==2:
+    print('Вы проиграли!')
+
