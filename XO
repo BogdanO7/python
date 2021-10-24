@@ -1,0 +1,124 @@
+import keyboard
+board=['1','2','3','4','5','6','7','8','9']
+
+a=0
+i=10
+
+while(a!=1):
+    a=int(input('Крестики нолики. Введите 1 для начала игры    '))
+while(i!=1 and i!=2):
+    print(' ' + board[0] + ' | ' + board[1] + ' | ' + board[2])
+    print('---+---+---')
+    print(' ' + board[3] + ' | ' + board[4] + ' | ' + board[5])
+    print('---+---+---')
+    print(' ' + board[6] + ' | ' + board[7] + ' | ' + board[8])
+    x=int(input('Ход игрока X. Введите поле.'))
+    if x==1 and board[0]=='1':
+        board.pop(0)
+        board.insert(0,'X')
+    elif x==2 and board[1]=='2':
+        board.pop(1)
+        board.insert(1,'X')
+    elif x==3 and board[2]=='3':
+        board.pop(2)
+        board.insert(2,'X')
+    elif x==4 and board[3]=='4':
+        board.pop(3)
+        board.insert(3,'X')
+    elif x==5 and board[4]=='5':
+        board.pop(4)
+        board.insert(4,'X')
+    elif x==6 and board[5]=='6':
+        board.pop(5)
+        board.insert(5,'X')
+    elif x==7 and board[6]=='7':
+        board.pop(6)
+        board.insert(6,'X')
+    elif x==8 and board[7]=='8':
+        board.pop(7)
+        board.insert(7,'X')
+    elif x==9 and board[8]=='9':
+        board.pop(8)
+        board.insert(8,'X')
+    else:
+        print('Ввод не допустим. Переход хода.    ')
+    print(' ' + board[0] + ' | ' + board[1] + ' | ' + board[2])
+    print('---+---+---')
+    print(' ' + board[3] + ' | ' + board[4] + ' | ' + board[5])
+    print('---+---+---')
+    print(' ' + board[6] + ' | ' + board[7] + ' | ' + board[8])
+    o=int(input('Ход игрока O.Введите поле.    '))
+    if o==1 and board[0]=='1':
+        board.pop(0)
+        board.insert(0,'O')
+    elif o==2 and board[1]=='2':
+        board.pop(1)
+        board.insert(1,'O')
+    elif o==3 and board[2]=='3':
+        board.pop(2)
+        board.insert(2,'O')
+    elif o==4 and board[3]=='4':
+        board.pop(3)
+        board.insert(3,'O')
+    elif o==5 and board[4]=='5':
+        board.pop(4)
+        board.insert(4,'O')
+    elif o==6 and board[5]=='6':
+        board.pop(5)
+        board.insert(5,'O')
+    elif o==7 and board[6]=='7':
+        board.pop(6)
+        board.insert(6,'O')
+    elif o==8 and board[7]=='8':
+        board.pop(7)
+        board.insert(7,'O')
+    elif o==9 and board[8]=='9':
+        board.pop(8)
+        board.insert(8,'O')
+    else:
+        print('Ввод не допустим. Переход хода.    ')
+    if board[0]==board[1] and board[0]==board[2] and board[1]==board[2]:
+        if board[0]=='X':
+            i=1
+        elif board[0]=='O':
+            i=2
+    elif board[3]==board[4] and board[3]==board[5] and board[4]==board[5]:
+        if board[0]=='X':
+            i=1
+        elif board[0]=='O':
+            i=2
+    elif board[6]==board[7] and board[6]==board[8] and board[7]==board[8]:
+        if board[0]=='X':
+            i=1
+        elif board[0]=='O':
+            i=2
+    elif board[0]==board[3] and board[0]==board[6] and board[3]==board[6]:
+        if board[0]=='X':
+            i=1
+        elif board[0]=='O':
+            i=2
+    elif board[1]==board[4] and board[1]==board[7] and board[4]==board[7]:
+        if board[0]=='X':
+            i=1
+        elif board[0]=='O':
+            i=2
+    elif board[2]==board[5] and board[2]==board[8] and board[5]==board[8]:
+        if board[0]=='X':
+            i=1
+        elif board[0]=='O':
+            i=2
+    elif board[0]==board[4] and board[0]==board[8] and board[4]==board[8]:
+        if board[0]=='X':
+            i=1
+        elif board[0]=='O':
+            i=2
+    elif board[2]==board[4] and board[2]==board[6] and board[4]==board[6]:
+        if board[0]=='X':
+            i=1
+        elif board[0]=='O':
+            i=2
+#print('Проверка')
+if i==1:
+    print('Выграл игрок X')
+else:
+    print('Выграл игрок O')
