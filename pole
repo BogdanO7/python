@@ -1,0 +1,75 @@
+
+pole=[['*','*','*','*','*','*','*','*','*','*'],
+      ['*','*','*','*','*','*','*','*','*','*'],
+      ['*','*','*','*','*','*','*','*','*','*'],
+      ['*','*','*','*','*','*','*','*','*','*'],
+      ['*','*','*','*','O','*','*','*','*','*'],
+      ['*','*','*','*','*','*','*','*','*','*'],
+      ['*','*','*','*','*','*','*','*','*','*'],
+      ['*','*','*','*','*','*','*','*','*','*'],
+      ['*','*','*','*','*','*','*','*','*','*'],
+      ['*','*','*','*','*','*','*','*','*','*']]
+a=4
+b=4
+while(a!=100):
+    print(pole[0])
+    print(pole[1])
+    print(pole[2])
+    print(pole[3])
+    print(pole[4])
+    print(pole[5])
+    print(pole[6])
+    print(pole[7])
+    print(pole[8])
+    print(pole[9])
+    if 'O' in pole[0]:
+        pole[0].remove('O')
+        pole[0].append('*')
+    if 'O' in pole[1]:
+        pole[1].remove('O')
+        pole[1].append('*')
+    if 'O' in pole[2]:
+        pole[2].remove('O')
+        pole[2].append('*')
+    if 'O' in pole[3]:
+        pole[3].remove('O')
+        pole[3].append('*')
+    if 'O' in pole[4]:
+        pole[4].remove('O')
+        pole[4].append('*')
+    if 'O' in pole[5]:
+        pole[5].remove('O')
+        pole[5].append('*')
+    if 'O' in pole[6]:
+        pole[6].remove('O')
+        pole[6].append('*')
+    if 'O' in pole[7]:
+        pole[7].remove('O')
+        pole[7].append('*')
+    if 'O' in pole[8]:
+        pole[8].remove('O')
+        pole[8].append('*')
+    if 'O' in pole[9]:
+        pole[9].remove('O')
+        pole[9].append('*')
+
+    c=input('Введите команду    ')
+    d=int(input('Введите число шагов    '))
+    if c=='вверх':
+        a=a-d
+        while(a<0):
+            a=a+10
+    elif c=='вниз':
+        a=a+d
+        while(a>9):
+            a=a-10
+    elif c=='влево':
+        b=b-d
+        while(b<0):
+            b=b+10
+    elif c=='вправо':
+        b=b+d
+        while(b>9):
+            b=b-10
+    pole[a][b]='O'
+print('the end')
